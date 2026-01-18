@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fife and Tay Cleaning Co | Premium Local Cleaning</title>
+    <meta name="description" content="Professional home, end of tenancy, Airbnb and commercial cleaning across Dundee, St Andrews, Fife and Tayside." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #fcfdfd;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #064e3b 0%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#14b8a6 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 10px; }
+        
+        /* Ensure sections account for fixed headers */
+        section { scroll-margin-top: 140px; }
+
+        .label-overlay {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <!-- Top Sticky Header Container -->
+    <div class="fixed w-full z-50 top-0">
+        <!-- Call Banner -->
+        <div class="bg-teal-900 text-teal-50 py-2.5 px-6 text-center text-sm font-medium tracking-wide shadow-md">
+            <span class="opacity-80">Need help? </span>
+            <a href="tel:07722509545" class="ml-1 font-bold hover:text-teal-300 transition-colors inline-flex items-center gap-1 underline underline-offset-4 decoration-teal-600">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                Call Now: 07722509545
+            </a>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="px-4 py-3">
+            <nav class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-lg">
+                <div class="flex items-center gap-2">
+                    <a href="#hero" class="flex items-center gap-2 nav-link">
+                        <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">FT</div>
+                        <span class="font-extrabold text-teal-900 text-lg hidden sm:block uppercase tracking-wider">Fife & Tay</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex gap-8 font-medium text-slate-600">
+                    <a href="#services" class="hover:text-teal-600 transition-colors nav-link">Services</a>
+                    <a href="#why" class="hover:text-teal-600 transition-colors nav-link">Why Us</a>
+                    <a href="#process" class="hover:text-teal-600 transition-colors nav-link">Process</a>
+                    <a href="#reviews" class="hover:text-teal-600 transition-colors nav-link">Reviews</a>
+                </div>
+                <a href="#quote" class="bg-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-md hover:shadow-teal-200/50 nav-link">
+                    Get a Quote
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-48 pb-20 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 relative z-10 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-sm font-bold uppercase tracking-widest mx-auto lg:mx-0">
+                    <span class="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
+                    Professional Cleaning in Fife & Tayside
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight text-slate-900">
+                    Your Home, <br><span class="text-gradient underline decoration-teal-200 decoration-8 underline-offset-4">Professionally</span> Sparkled.
+                </h1>
+                <p class="text-xl text-slate-600 max-w-lg leading-relaxed mx-auto lg:mx-0">
+                    Premium domestic and commercial cleaning services across Dundee, St Andrews, and beyond. Trusted by homeowners and businesses for over 10 years.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#quote" class="px-8 py-4 bg-teal-600 text-white rounded-2xl font-bold text-lg hover:bg-teal-700 shadow-xl shadow-teal-500/20 transition-all nav-link text-center">Book Your Clean</a>
+                    <a href="#services" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all nav-link text-center">Our Services</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-teal-100 rounded-full blur-3xl opacity-60"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-60"></div>
+                <!-- Real-world Before & After Photos -->
+                <div class="relative grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-12">
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl floating" alt="Bathroom Before">
+                            <span class="label-overlay">Before</span>
+                        </div>
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl" alt="Bathroom After">
+                            <span class="label-overlay">After</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1556912177-c5403697584d?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl" alt="Kitchen Before">
+                            <span class="label-overlay">Before</span>
+                        </div>
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl floating" style="animation-delay: 1.5s" alt="Kitchen After">
+                            <span class="label-overlay">After</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="py-24 bg-slate-900 text-white overflow-hidden relative border-t border-slate-800 scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Why locals trust Fife & Tay</h2>
+                <p class="text-slate-400">We don't just clean surfaces; we create healthy, stress-free environments for you to thrive in.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 hover:border-teal-500 transition-all group text-center md:text-left">
+                    <div class="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-teal-500 transition-all">
+                        <svg class="w-7 h-7 text-teal-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fully Insured & Vetted</h3>
+                    <p class="text-slate-400">Rest easy knowing our staff are background-checked and covered by comprehensive liability insurance.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 hover:border-teal-500 transition-all group text-center md:text-left">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-emerald-500 transition-all">
+                        <svg class="w-7 h-7 text-emerald-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Eco-Friendly Options</h3>
+                    <p class="text-slate-400">We offer sustainable cleaning products that are safe for your children, pets, and the planet.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 hover:border-teal-500 transition-all group text-center md:text-left">
+                    <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-cyan-500 transition-all">
+                        <svg class="w-7 h-7 text-cyan-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reliable Scheduling</h3>
+                    <p class="text-slate-400">Same-day turnovers for Airbnbs and flexible time slots to fit your busy lifestyle without fail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-24 bg-white scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl text-center md:text-left">
+                    <span class="text-teal-600 font-bold uppercase tracking-widest text-sm">Services</span>
+                    <h2 class="text-4xl font-extrabold mt-2 text-slate-900">Tailored solutions for every space</h2>
+                </div>
+                <p class="text-slate-500 text-center md:text-right max-w-xs mx-auto md:mx-0">From single apartments to large commercial offices, we have the team to handle it.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Deep Home Clean -->
+                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="Deep Home Cleaning">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-white">Deep Home Clean</h3>
+                        <p class="text-slate-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Our signature restoration clean. We tackle limescale, accumulated dust, and grime behind appliances to restore your home to showroom condition.</p>
+                        <div class="mt-4 flex items-center gap-2 font-semibold text-white">
+                            Find out more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="End of Tenancy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-white">End of Tenancy</h3>
+                        <p class="text-slate-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Specialized deep cleaning designed to secure your deposit. Checklist-based quality control to meet letting agent standards.</p>
+                        <div class="mt-4 flex items-center gap-2 font-semibold text-white">
+                            Find out more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="Airbnb">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-white">Airbnb Turnover</h3>
+                        <p class="text-slate-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fast, high-quality resets for your holiday rental. We handle the laundry, trash, and sparkle so you never miss a 5-star rating.</p>
+                        <div class="mt-4 flex items-center gap-2 font-semibold text-white">
+                            Find out more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-teal-50 relative overflow-hidden scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-slate-900">Booking to Sparkling in 3 Steps</h2>
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-10 left-0 w-full h-1 bg-teal-200 -z-10"></div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-teal-100 group-hover:border-teal-500 transition-colors">
+                        <span class="text-3xl font-black text-teal-600">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Request a Quote</h3>
+                    <p class="text-slate-600">Fill out our quick form or call us. We’ll provide a transparent, flat-rate price.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-teal-100 group-hover:border-teal-500 transition-colors">
+                        <span class="text-3xl font-black text-teal-600">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Clean</h3>
+                    <p class="text-slate-600">Our professional cleaners arrive with premium supplies and follow our 50-point checklist.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-teal-100 group-hover:border-teal-500 transition-colors">
+                        <span class="text-3xl font-black text-teal-600">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Enjoy Your Space</h3>
+                    <p class="text-slate-600">Walk into a fresh, perfectly cleaned property. Your satisfaction is 100% guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-white overflow-hidden scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-slate-900">Trusted by the Community</h2>
+            <div class="flex overflow-x-auto gap-8 pb-12 snap-x hide-scrollbar no-scrollbar">
+                <div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+                    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+                    <p class="text-lg italic text-slate-700 mb-6">"Absolutely spotless end of tenancy clean in St Andrews. We got our full deposit back without a single question from the agent. Best in Fife!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-200 rounded-full flex items-center justify-center font-bold text-teal-800">S</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Sarah McInroy</p>
+                            <p class="text-sm text-slate-500">Dundee Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+                    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+                    <p class="text-lg italic text-slate-700 mb-6">"We've used Fife & Tay for our Airbnb turnover for 6 months now. They are reliable, thorough, and guests always comment on how clean it is."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center font-bold text-emerald-800">L</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Laura Grant</p>
+                            <p class="text-sm text-slate-500">Holiday Let Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+                    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+                    <p class="text-lg italic text-slate-700 mb-6">"Professional office clean every Monday morning. The team is friendly, fast, and the standard is consistently high. Highly recommend James."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-cyan-200 rounded-full flex items-center justify-center font-bold text-cyan-800">J</div>
+                        <div>
+                            <p class="font-bold text-slate-900">James Thompson</p>
+                            <p class="text-sm text-slate-500">Dundee Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section / Form -->
+    <section id="quote" class="py-24 relative overflow-hidden scroll-mt-32">
+        <div class="absolute inset-0 bg-teal-900 -z-10"></div>
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="text-white space-y-8 text-center md:text-left">
+                <h2 class="text-5xl font-extrabold leading-tight">Ready for a fresh start?</h2>
+                <p class="text-teal-100 text-lg opacity-80">Get a bespoke quote in minutes. Our team is standing by to help you reclaim your time.</p>
+                <div class="space-y-4 max-w-sm mx-auto md:mx-0">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center text-teal-400">✓</div>
+                        <span>Flat-rate pricing, no surprises</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center text-teal-400">✓</div>
+                        <span>Fully insured local team</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center text-teal-400">✓</div>
+                        <span>100% Satisfaction Guarantee</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative">
+                <form action="https://formsubmit.co/ajax/yf42@st-andrews.ac.uk" method="POST" id="contactForm" class="space-y-4">
+                    <input type="hidden" name="_subject" value="New Cleaning Quote Request!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                        <input type="text" name="name" placeholder="John Doe" class="w-full px-5 py-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-teal-500 transition-all outline-none" required>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                            <input type="email" name="email" placeholder="john@example.com" class="w-full px-5 py-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-teal-500 transition-all outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Phone</label>
+                            <input type="tel" name="phone" placeholder="07123..." class="w-full px-5 py-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-teal-500 transition-all outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Service Needed</label>
+                        <select name="service" class="w-full px-5 py-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-teal-500 transition-all outline-none">
+                            <option>Home Cleaning</option>
+                            <option>End of Tenancy</option>
+                            <option>Airbnb Turnover</option>
+                            <option>Commercial Cleaning</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                        <textarea name="message" rows="4" placeholder="Tell us about the property size and your location..." class="w-full px-5 py-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-teal-500 transition-all outline-none" required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="w-full py-5 bg-teal-600 text-white rounded-2xl font-bold text-lg hover:bg-teal-700 shadow-xl shadow-teal-500/20 transition-all">
+                        Request Quote Now
+                    </button>
+                </form>
+                <div id="successMessage" class="hidden absolute inset-0 bg-white rounded-[2.5rem] flex flex-col items-center justify-center text-center p-8 z-10">
+                    <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-4xl mb-6">✓</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Message Received!</h3>
+                    <p class="text-slate-600">Your request has been sent to yf42@st-andrews.ac.uk. We'll get back to you within 2 business hours.</p>
+                    <button onclick="window.location.reload()" class="mt-6 text-teal-600 font-bold hover:underline">Send another request</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6 text-white">
+                        <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center font-bold text-xl">FT</div>
+                        <span class="font-extrabold text-xl uppercase tracking-wider">Fife & Tay</span>
+                    </div>
+                    <p class="max-w-sm mb-6">Dundee’s leading premium cleaning company. From student lets to luxury homes, we bring the shine back to every corner of Tayside.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 italic">Where we clean</h4>
+                    <ul class="space-y-4">
+                        <li>Dundee City</li>
+                        <li>St Andrews</li>
+                        <li>Tayport & Newport</li>
+                        <li>Cupar & East Fife</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 italic">Support</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#quote" class="hover:text-white transition-colors nav-link">Satisfaction Guarantee</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-900 text-center text-sm">
+                <p>© 2026 Fife and Tay Cleaning Co. Registered in Scotland.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1) || 'hero';
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offset = 140; 
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('successMessage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                submitBtn.innerText = "Sending...";
+                submitBtn.disabled = true;
+
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        form.classList.add('hidden');
+                        success.classList.remove('hidden');
+                        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert("Submission failed. Please try again or call us at 07722509545!");
+                    submitBtn.innerText = "Request Quote Now";
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'translate-y-10', 'opacity-0');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
