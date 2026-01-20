@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"
+></script>
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -65,7 +66,97 @@
             letter-spacing: 0.05em;
             backdrop-filter: blur(4px);
         }
+        /* The Sparkle: Button Shimmer Effect */
+.sparkle-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.sparkle-button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transform: rotate(30deg);
+    transition: none;
+}
+
+.sparkle-button:hover::after {
+    left: 150%;
+    transition: all 0.7s ease-in-out;
+}
+
+/* The Polish: Subtle Glow Effect */
+.hover-glow:hover {
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.4);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+/* Hide scrollbar for the reviews carousel */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
     </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Fife & Tay Cleaning Co",
+  "image": "https://media.discordapp.net/attachments/216653253696421891/1462943626907615342/unnamed-removebg-preview.png",
+  "@id": "https://fifeandtay.co.uk",
+  "url": "https://fifeandtay.co.uk",
+  "telephone": "07459550285",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Serving Dundee and Fife",
+    "addressLocality": "Dundee",
+    "addressRegion": "Scotland",
+    "postalCode": "DD1", 
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 56.462,
+    "longitude": -2.970
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Dundee" },
+    { "@type": "City", "name": "St Andrews" },
+    { "@type": "City", "name": "Cupar" },
+    { "@type": "City", "name": "Tayport" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/your-page",
+    "https://www.instagram.com/your-page"
+  ]
+}
+</script>
 </head>
 <body class="antialiased text-slate-800">
 
@@ -94,8 +185,9 @@
                     <a href="#why" class="hover:text-teal-600 transition-colors nav-link">Why Us</a>
                     <a href="#process" class="hover:text-teal-600 transition-colors nav-link">Process</a>
                     <a href="#reviews" class="hover:text-teal-600 transition-colors nav-link">Reviews</a>
+                    <a href="#faq" class="hover:text-teal-600 transition-colors nav-link">FAQ</a>
                 </div>
-                <a href="#quote" class="bg-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-md hover:shadow-teal-200/50 nav-link">
+                <a href="#quote" class="sparkle-button bg-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-md hover:shadow-teal-200/50 nav-link">
                     Get a Quote
                 </a>
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
@@ -108,6 +200,7 @@
         <a href="#why" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Why Us</a>
         <a href="#process" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Process</a>
         <a href="#reviews" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Reviews</a>
+        <a href="#faq" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">FAQ</a>
     </div>
 </div>
         </div>
@@ -129,7 +222,7 @@
                     Premium domestic and commercial cleaning services across Dundee, St Andrews, and beyond. Trusted by homeowners and businesses for over 10 years.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#quote" class="px-8 py-4 bg-teal-600 text-white rounded-2xl font-bold text-lg hover:bg-teal-700 shadow-xl shadow-teal-500/20 transition-all nav-link text-center">Book Your Clean</a>
+                    <a href="#quote" class="sparkle-button px-8 py-4 bg-teal-600 text-white rounded-2xl font-bold text-lg hover:bg-teal-700 shadow-xl shadow-teal-500/20 transition-all nav-link text-center">Book Your Clean</a>
                     <a href="#services" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all nav-link text-center">Our Services</a>
                 </div>
             </div>
@@ -217,7 +310,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1: Deep Home Clean -->
-                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                <a href="#quote" class="hover-glow service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
                     <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="Deep Home Cleaning">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -230,7 +323,7 @@
                 </a>
 
                 <!-- Card 2 -->
-                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                <a href="#quote" class="hover-glow service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="End of Tenancy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -243,7 +336,7 @@
                 </a>
 
                 <!-- Card 3 -->
-                <a href="#quote" class="service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
+                <a href="#quote" class="hover-glow service-card group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-50 relative h-[450px] block nav-link">
                     <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=600" class="service-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-75 group-hover:brightness-90" alt="Airbnb">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -289,12 +382,82 @@
             </div>
         </div>
     </section>
+    <section id="faq" class="py-24 bg-white scroll-mt-32">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-teal-600 font-bold uppercase tracking-widest text-sm">Got Questions?</span>
+            <h2 class="text-4xl font-extrabold mt-2 text-slate-900">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group border border-slate-200 rounded-2xl p-6 transition-all hover:border-teal-500/30 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer">
+                    <h3 class="text-lg font-bold text-slate-800">Do I need to provide cleaning supplies or a vacuum?</h3>
+                    <span class="text-teal-600 transition-transform duration-300 group-open:-rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    No, we come fully prepared! Our team brings professional-grade cleaning solutions, fresh microfiber cloths, and high-performance HEPA-filter vacuums to every job. If you have specific products you prefer us to use, just let us know.
+                </p>
+            </details>
+
+            <details class="group border border-slate-200 rounded-2xl p-6 transition-all hover:border-teal-500/30 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer">
+                    <h3 class="text-lg font-bold text-slate-800">Are you pet-friendly and safe for my home?</h3>
+                    <span class="text-teal-600 transition-transform duration-300 group-open:-rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Absolutely. We love pets! We use eco-friendly and non-toxic cleaning agents that are safe for both your furry friends and children. We also ensure our staff are trained to be respectful of your pets' space while we work.
+                </p>
+            </details>
+
+            <details class="group border border-slate-200 rounded-2xl p-6 transition-all hover:border-teal-500/30 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer">
+                    <h3 class="text-lg font-bold text-slate-800">Do I need to be home during the cleaning?</h3>
+                    <span class="text-teal-600 transition-transform duration-300 group-open:-rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    It is entirely up to you. Many of our clients provide us with a key or a lockbox code so we can clean while they are at work. All our staff are fully vetted and background-checked for your peace of mind.
+                </p>
+            </details>
+
+            <details class="group border border-slate-200 rounded-2xl p-6 transition-all hover:border-teal-500/30 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer">
+                    <h3 class="text-lg font-bold text-slate-800">What areas do you cover in Fife and Tayside?</h3>
+                    <span class="text-teal-600 transition-transform duration-300 group-open:-rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    We currently serve Dundee City, St Andrews, Tayport, Newport-on-Tay, Cupar, and most of East Fife. If you aren't sure if we cover your location, give us a call and we'll let you know!
+                </p>
+            </details>
+
+            <details class="group border border-slate-200 rounded-2xl p-6 transition-all hover:border-teal-500/30 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer">
+                    <h3 class="text-lg font-bold text-slate-800">What is your cancellation policy?</h3>
+                    <span class="text-teal-600 transition-transform duration-300 group-open:-rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    We understand that life happens. We ask for at least 24 hours' notice if you need to cancel or reschedule your booking. This allows us to reallocate the time slot to another client.
+                </p>
+            </details>
+        </div>
+    </div>
+</section>
 
     <!-- Reviews Section -->
     <section id="reviews" class="py-24 bg-white overflow-hidden scroll-mt-32">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl font-extrabold text-center mb-16 text-slate-900">Trusted by the Community</h2>
-            <div class="flex overflow-x-auto gap-8 pb-12 snap-x hide-scrollbar no-scrollbar">
+            <div id="review-container" class="flex overflow-x-auto gap-8 pb-12 snap-x hide-scrollbar no-scrollbar">
                 <div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
                     <div class="text-amber-400 text-xl mb-4">★★★★★</div>
                     <p class="text-lg italic text-slate-700 mb-6">"Absolutely spotless end of tenancy clean in St Andrews. We got our full deposit back without a single question from the agent. Best in Fife!"</p>
@@ -328,6 +491,53 @@
                         </div>
                     </div>
                 </div>
+                <div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+    <p class="text-lg italic text-slate-700 mb-6">"The weekly domestic clean has been a lifesaver for our busy family in Cupar. The team is incredibly reliable and the house smells amazing every Tuesday!"</p>
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-800">D</div>
+        <div>
+            <p class="font-bold text-slate-900">David Robertson</p>
+            <p class="text-sm text-slate-500">Cupar Resident</p>
+        </div>
+    </div>
+</div>
+
+<div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+    <p class="text-lg italic text-slate-700 mb-6">"Booked a deep clean for my parents' house in Tayport and the results were incredible. The oven looks brand new! Friendly team and great attention to detail."</p>
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-rose-200 rounded-full flex items-center justify-center font-bold text-rose-800">E</div>
+        <div>
+            <p class="font-bold text-slate-900">Emma Christie</p>
+            <p class="text-sm text-slate-500">Tayport Homeowner</p>
+        </div>
+    </div>
+</div>
+
+<div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+    <p class="text-lg italic text-slate-700 mb-6">"Excellent service for our holiday cottage in St Andrews. They are flexible with our booking changes and always leave the place in pristine condition for our guests."</p>
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-indigo-200 rounded-full flex items-center justify-center font-bold text-indigo-800">M</div>
+        <div>
+            <p class="font-bold text-slate-900">Michael Scott</p>
+            <p class="text-sm text-slate-500">Holiday Let Manager</p>
+        </div>
+    </div>
+</div>
+
+<div class="min-w-[320px] md:min-w-[400px] bg-slate-50 p-8 rounded-[2rem] snap-center shadow-sm border border-slate-100">
+    <div class="text-amber-400 text-xl mb-4">★★★★★</div>
+    <p class="text-lg italic text-slate-700 mb-6">"Highly recommend for anyone in Newport-on-Tay needing a post-renovation clean. They were thorough, efficient, and very easy to communicate with. 5 stars!"</p>
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center font-bold text-orange-800">S</div>
+        <div>
+            <p class="font-bold text-slate-900">Sophie Henderson</p>
+            <p class="text-sm text-slate-500">Newport Resident</p>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -533,8 +743,32 @@ mobileLinks.forEach(link => {
         mobileMenu.classList.add('hidden');
     });
 });
+// Auto-Scrolling Review Carousel Logic
+const container = document.getElementById('review-container');
+let isAutoScrolling = true;
+
+function autoScroll() {
+    if (isAutoScrolling && container) {
+        const cardWidth = container.firstElementChild.offsetWidth + 32; // card width + gap
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        
+        // If we reach the end, jump back to start, otherwise scroll to next card
+        if (container.scrollLeft >= maxScroll - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+    }
+}
+
+// Move every 4 seconds
+let scrollInterval = setInterval(autoScroll, 4000);
+
+// Pause scrolling when the user is looking or touching it
+container.addEventListener('mouseenter', () => isAutoScrolling = false);
+container.addEventListener('mouseleave', () => isAutoScrolling = true);
+container.addEventListener('touchstart', () => isAutoScrolling = false);
     </script>
 </body>
 </html>
-
 
