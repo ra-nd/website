@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -96,7 +98,18 @@
                 <a href="#quote" class="bg-teal-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-md hover:shadow-teal-200/50 nav-link">
                     Get a Quote
                 </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+</button>
             </nav>
+            <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6">
+    <div class="glass rounded-2xl p-4 flex flex-col gap-4 shadow-xl border border-teal-100/50">
+        <a href="#services" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Services</a>
+        <a href="#why" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Why Us</a>
+        <a href="#process" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Process</a>
+        <a href="#reviews" class="nav-link block px-4 py-2 font-bold text-slate-700 hover:text-teal-600">Reviews</a>
+    </div>
+</div>
         </div>
     </div>
 
@@ -125,24 +138,32 @@
                 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-60"></div>
                 <!-- Real-world Before & After Photos -->
                 <div class="relative grid grid-cols-2 gap-4">
-                    <div class="space-y-4 pt-12">
+                    <div class="space-y-4 pt-41">
                         <div class="relative group">
-                            <img src="https://media.discordapp.net/attachments/216653253696421891/1462935194079199449/unwatermarked_Gemini_Generated_Image_5azfc55azfc55azf.png?ex=69700012&is=696eae92&hm=70a11f649aabff7f40eaba5e616e83419ad688d0bfcad9214d7428f0d47db6c6&=&format=webp&quality=lossless&width=1100&height=600" class="rounded-3xl shadow-2xl floating" alt="Bathroom Before">
-                            <span class="label-overlay">Before</span>
+                            <a href=" https://media.discordapp.net/attachments/216653253696421891/1462935194079199449/unwatermarked_Gemini_Generated_Image_5azfc55azfc55azf.png?ex=69700012&is=696eae92&hm=70a11f649aabff7f40eaba5e616e83419ad688d0bfcad9214d7428f0d47db6c6&=&format=webp&quality=lossless&width=1100&height=600" class="glightbox">
+                            <img src="https://media.discordapp.net/attachments/216653253696421891/1462935194079199449/unwatermarked_Gemini_Generated_Image_5azfc55azfc55azf.png?ex=69700012&is=696eae92&hm=70a11f649aabff7f40eaba5e616e83419ad688d0bfcad9214d7428f0d47db6c6&=&format=webp&quality=lossless&width=1100&height=600" class="rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-110" alt="Bathroom Before">
+                            </a>
+                            <span class="label-overlay">Bathroom</span>
                         </div>
                         <div class="relative group">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl" alt="Bathroom After">
-                            <span class="label-overlay">After</span>
+                            <a href="https://media.discordapp.net/attachments/216653253696421891/1462936270765555897/unwatermarked_Gemini_Generated_Image_ftzw4oftzw4oftzw.png?ex=6970a9d2&is=696f5852&hm=68cdf4c0e7f6a2306f12027c35fb935c08aa38ceb07a3f27b2ffe8a838ef6160&=&format=webp&quality=lossless&width=1998&height=1090" class="glightbox">
+                            <img src="https://media.discordapp.net/attachments/216653253696421891/1462936270765555897/unwatermarked_Gemini_Generated_Image_ftzw4oftzw4oftzw.png?ex=6970a9d2&is=696f5852&hm=68cdf4c0e7f6a2306f12027c35fb935c08aa38ceb07a3f27b2ffe8a838ef6160&=&format=webp&quality=lossless&width=1998&height=1090" class="rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-110" alt="Bathroom After">
+                            </a>
+                            <span class="label-overlay">Living room</span>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="relative group">
-                            <img src="https://images.unsplash.com/photo-1556912177-c5403697584d?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl" alt="Kitchen Before">
-                            <span class="label-overlay">Before</span>
+                            <a href="https://media.discordapp.net/attachments/216653253696421891/1463172226038632551/6ef12041-e16c-4191-aa43-904cf0da16f2.png?ex=6970dcd3&is=696f8b53&hm=6da8e7d503abdc1fd1d74f6c55da38eb39ca583149bf7253850feb6ca6a82776&=&format=webp&quality=lossless&width=1100&height=600" class="glightbox">
+                            <img src="https://media.discordapp.net/attachments/216653253696421891/1463172226038632551/6ef12041-e16c-4191-aa43-904cf0da16f2.png?ex=6970dcd3&is=696f8b53&hm=6da8e7d503abdc1fd1d74f6c55da38eb39ca583149bf7253850feb6ca6a82776&=&format=webp&quality=lossless&width=1100&height=600" class="rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-110" alt="Kitchen Before">
+                            </a>
+                            <span class="label-overlay">bedroom</span>
                         </div>
                         <div class="relative group">
-                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl floating" style="animation-delay: 1.5s" alt="Kitchen After">
-                            <span class="label-overlay">After</span>
+                            <a href="https://media.discordapp.net/attachments/216653253696421891/1463170141968797789/0392d9ac-69b3-4e5f-93e6-6800b012ac3e.png?ex=6970dae2&is=696f8962&hm=84a15f899e2f0a9911eadd7a5c1d91fca0163cfdb7095563ae8de0eb86ad673d&=&format=webp&quality=lossless&width=1998&height=1090" class="glightbox">
+                            <img src="https://media.discordapp.net/attachments/216653253696421891/1463170141968797789/0392d9ac-69b3-4e5f-93e6-6800b012ac3e.png?ex=6970dae2&is=696f8962&hm=84a15f899e2f0a9911eadd7a5c1d91fca0163cfdb7095563ae8de0eb86ad673d&=&format=webp&quality=lossless&width=1998&height=1090" class="rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-110" alt="Kitchen After">
+                            </a>
+                            <span class="label-overlay">Kitchen</span>
                         </div>
                     </div>
                 </div>
@@ -491,6 +512,27 @@
             el.classList.add('transition-all', 'duration-700', 'translate-y-10', 'opacity-0');
             observer.observe(el);
         });
+        const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true
+    });
+    // Mobile Menu Toggle Logic
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.nav-link');
+
+mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Close menu when a link is clicked
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
     </script>
 </body>
 </html>
