@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"
 ></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -601,7 +602,7 @@
                         Request Quote Now
                     </button>
                 </form>
-                <div id="successMessage" class="hidden absolute inset-0 bg-white rounded-[2.5rem] flex flex-col items-center justify-center text-center p-8 z-10">
+                <div id="successMessage" class="hidden absolute inset-0 bg-white rounded-[2.5rem] flex flex-col items-center justify-center text-center p-8 z-10 overflow-y-auto">
                     <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-4xl mb-6">✓</div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Message Received!</h3>
                     <p class="text-slate-600">Your request has been sent to fifeandtay@proton.me. We'll get back to you within 2 business hours.</p>
@@ -693,6 +694,12 @@
                     });
                     
                     if (response.ok) {
+                        confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#0d9488', '#14b8a6', '#5eead4'] // Using your teal brand colors
+    });
                         form.classList.add('hidden');
                         success.classList.remove('hidden');
                         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
